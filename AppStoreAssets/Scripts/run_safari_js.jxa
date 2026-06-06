@@ -1,0 +1,30 @@
+ObjC.import("Foundation");
+
+function readUtf8(path) {
+  const error = Ref();
+  const text = $.NSString.stringWithContentsOfFileEncodingError(
+    path,
+    $.NSUTF8StringEncoding,
+    error
+  );
+  if (text === null) {
+    throw new Error(`Unable to read ${path}`);
+  }
+  return ObjC.unwrap(text);
+}
+
+function run(argv) {
+  if (argv.length !== 1) {
+    throw new Error("Usage: osascript -l JavaScript run_safari_js.jxa <script.js>");
+  }
+
+  const scriptPath = argv[0];
+  const script = readUtf8(scriptPath);
+  const safari = Application("Safari");
+
+  if (safari.documents.length === 0) {
+    throw new Error("Safari has no open documents");
+  }
+
+  return safari.doJavaScript(script, { in: safari.documents[0] });
+}

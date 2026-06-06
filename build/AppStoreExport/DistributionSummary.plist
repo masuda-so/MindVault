@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MindVault.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>3</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>E1A61AB9C24D94B19A239A0C3C773BEF074D23FB</string>
+				<key>dateExpires</key>
+				<string>2027/02/03</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>L246T6JU9P.ether.gk.MindVault</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>L246T6JU9P</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>MindVault.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>bc803d46-b7c0-4d68-9d20-c0ce06e2f39c</string>
+				<key>dateExpires</key>
+				<string>2027/02/03</string>
+				<key>name</key>
+				<string>iOS Team Store Provisioning Profile: ether.gk.MindVault</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>L246T6JU9P</string>
+				<key>name</key>
+				<string></string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

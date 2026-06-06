@@ -1,0 +1,1987 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "": {},
+    " ": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " "
+          }
+        }
+      }
+    },
+    "## Today's Notes\n\n- \n\n#Journal": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "## 今日のメモ\n\n- \n\n#日記"
+          }
+        }
+      }
+    },
+    "#%@": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "#%@"
+          }
+        }
+      }
+    },
+    "%lld": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld"
+          }
+        }
+      }
+    },
+    "%lld / %lld uses": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld / %2$lld回"
+          }
+        }
+      }
+    },
+    "%lld backlinks": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld バックリンク"
+          }
+        }
+      }
+    },
+    "%lld characters": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 文字"
+          }
+        }
+      }
+    },
+    "%lld Markdown notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Markdown ノート"
+          }
+        }
+      }
+    },
+    "%lld notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld件"
+          }
+        }
+      }
+    },
+    "%lld visible links": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 表示リンク"
+          }
+        }
+      }
+    },
+    "%lld words": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 語"
+          }
+        }
+      }
+    },
+    "%lld/%lld": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "• %@": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• %@"
+          }
+        }
+      }
+    },
+    "Add a note to %@": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@で新規メモ"
+          }
+        }
+      }
+    },
+    "Add to Daily": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デイリーに追加"
+          }
+        }
+      }
+    },
+    "Added %lld unorganized notes to the AI organization queue.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld件の未整理メモをAI整理キューへ追加しました。"
+          }
+        }
+      }
+    },
+    "AI": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI"
+          }
+        }
+      }
+    },
+    "AI Assistant": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AIアシスタント"
+          }
+        }
+      }
+    },
+    "AI Chat Search": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AIチャット検索"
+          }
+        }
+      }
+    },
+    "AI Eligible": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI対象"
+          }
+        }
+      }
+    },
+    "AI Enabled": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI対象"
+          }
+        }
+      }
+    },
+    "AI Layout": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI配置"
+          }
+        }
+      }
+    },
+    "AI organization %lld/%lld": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI整理 %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "AI organization suggestions appear here after saving or running the button.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存後またはボタン操作でAI整理候補がここに表示されます。"
+          }
+        }
+      }
+    },
+    "AI Search": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI検索"
+          }
+        }
+      }
+    },
+    "AI Suggestions": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI提案"
+          }
+        }
+      }
+    },
+    "AI Usage This Month": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今月のAI利用状況"
+          }
+        }
+      }
+    },
+    "AI-classified or user-created collection": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI分類またはユーザー作成のコレクション"
+          }
+        }
+      }
+    },
+    "All": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべて"
+          }
+        }
+      }
+    },
+    "All CSV": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全CSV"
+          }
+        }
+      }
+    },
+    "All dates": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべての日付"
+          }
+        }
+      }
+    },
+    "All JSON": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全JSON"
+          }
+        }
+      }
+    },
+    "All Links": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのリンク"
+          }
+        }
+      }
+    },
+    "All Notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのメモ"
+          }
+        }
+      }
+    },
+    "Appearance": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外観"
+          }
+        }
+      }
+    },
+    "Apply": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "適用"
+          }
+        }
+      }
+    },
+    "Ask using local notes only": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ローカルノートだけで質問する"
+          }
+        }
+      }
+    },
+    "Assets": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アセット"
+          }
+        }
+      }
+    },
+    "Autosaved: %@": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動保存: %@"
+          }
+        }
+      }
+    },
+    "Backlinks %lld": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "バックリンク %lld"
+          }
+        }
+      }
+    },
+    "Body": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本文"
+          }
+        }
+      }
+    },
+    "Close": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "閉じる"
+          }
+        }
+      }
+    },
+    "Collaboration, shared knowledge bases, and room for admin features": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共同編集、共有ナレッジベース、管理者機能の拡張枠"
+          }
+        }
+      }
+    },
+    "Collection": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コレクション"
+          }
+        }
+      }
+    },
+    "Create a new Markdown note draft in MindVault from Shortcuts or Siri.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ShortcutsやSiriからMindVaultに新しいMarkdownメモの下書きを作成します。"
+          }
+        }
+      }
+    },
+    "Create a new note and it will appear here.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新規メモを作成するとここに表示されます。"
+          }
+        }
+      }
+    },
+    "Create a note in %@": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@にメモする"
+          }
+        }
+      }
+    },
+    "Create MindVault Note": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MindVaultメモを作成"
+          }
+        }
+      }
+    },
+    "Create Note": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メモを作成"
+          }
+        }
+      }
+    },
+    "Creating starter data.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "初期データを作成しています。"
+          }
+        }
+      }
+    },
+    "Current Markdown": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在のMarkdown"
+          }
+        }
+      }
+    },
+    "Current Plan": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在のプラン"
+          }
+        }
+      }
+    },
+    "Current: %@": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在: %@"
+          }
+        }
+      }
+    },
+    "Daily": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デイリー"
+          }
+        }
+      }
+    },
+    "Daily %@": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デイリー %@"
+          }
+        }
+      }
+    },
+    "Daily Note": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デイリーノート"
+          }
+        }
+      }
+    },
+    "Daily Note Example": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デイリーノートの例"
+          }
+        }
+      }
+    },
+    "Daily Note Example %@": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デイリーノートの例 %@"
+          }
+        }
+      }
+    },
+    "Dark": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ダーク"
+          }
+        }
+      }
+    },
+    "Debug Plan": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバッグ用プラン"
+          }
+        }
+      }
+    },
+    "Design": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設計"
+          }
+        }
+      }
+    },
+    "Destination": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開く場所"
+          }
+        }
+      }
+    },
+    "Direct relationships created with [[Note Name]].": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "[[メモ名]] で直接つないだ関係"
+          }
+        }
+      }
+    },
+    "Direct relationships created with [text](note.md).": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "[text](note.md) で直接つないだ関係"
+          }
+        }
+      }
+    },
+    "Dismiss": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "却下"
+          }
+        }
+      }
+    },
+    "Display": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示"
+          }
+        }
+      }
+    },
+    "Edit": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "編集"
+          }
+        }
+      }
+    },
+    "Excluded": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "対象外"
+          }
+        }
+      }
+    },
+    "Explicit Links": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明示リンク"
+          }
+        }
+      }
+    },
+    "Explore with the Graph": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グラフで探す"
+          }
+        }
+      }
+    },
+    "Focused on explicit links and AI suggestions. Add shared tags from the right filter.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明示リンクとAI提案を中心に表示しています。共通タグは右のフィルタで追加できます。"
+          }
+        }
+      }
+    },
+    "For local verification in Debug builds only. Release builds update the plan from verified StoreKit transactions.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debugビルドだけのローカル検証用です。ReleaseではStoreKitの検証済みトランザクションからプランを更新します。"
+          }
+        }
+      }
+    },
+    "Foundation Models are unavailable in this runtime environment.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Foundation Modelsはこの実行環境では利用できません。"
+          }
+        }
+      }
+    },
+    "Free": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free"
+          }
+        }
+      }
+    },
+    "GettingStarted": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "はじめに"
+          }
+        }
+      }
+    },
+    "Graph": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グラフ"
+          }
+        }
+      }
+    },
+    "Graph Settings": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グラフ設定"
+          }
+        }
+      }
+    },
+    "Graph view": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グラフビュー"
+          }
+        }
+      }
+    },
+    "Graph View": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グラフビュー"
+          }
+        }
+      }
+    },
+    "Growing Reading Notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "読書メモの育て方"
+          }
+        }
+      }
+    },
+    "Guide": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使い方"
+          }
+        }
+      }
+    },
+    "How do I use AI organization?": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI整理の使い方は？"
+          }
+        }
+      }
+    },
+    "Idea Fragments": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アイデアの断片"
+          }
+        }
+      }
+    },
+    "Import": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "インポート"
+          }
+        }
+      }
+    },
+    "Import / Export": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "インポート / エクスポート"
+          }
+        }
+      }
+    },
+    "Import file is too large (%lld bytes / limit %lld bytes).": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "インポートファイルが大きすぎます（%1$lld bytes / 上限 %2$lld bytes）。"
+          }
+        }
+      }
+    },
+    "Import Workflow": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "インポート運用"
+          }
+        }
+      }
+    },
+    "Include this note in AI processing": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このメモをAI処理対象にする"
+          }
+        }
+      }
+    },
+    "Journal": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "日記"
+          }
+        }
+      }
+    },
+    "Knowledge Graph": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "知識グラフ"
+          }
+        }
+      }
+    },
+    "Last 30 days": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "直近30日"
+          }
+        }
+      }
+    },
+    "Last 7 days": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "直近7日"
+          }
+        }
+      }
+    },
+    "Learning": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "学習"
+          }
+        }
+      }
+    },
+    "Light": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ライト"
+          }
+        }
+      }
+    },
+    "Linked Mentions": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リンクされたメンション"
+          }
+        }
+      }
+    },
+    "Local": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ローカル"
+          }
+        }
+      }
+    },
+    "Local notes, basic editing, and monthly AI organization limits": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ローカルメモ、基本編集、月間AI整理制限"
+          }
+        }
+      }
+    },
+    "Markdown": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Markdown"
+          }
+        }
+      }
+    },
+    "Markdown exports the current note. CSV/JSON exports the whole vault with frontmatter for Obsidian vault workflows.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Markdownは現在のメモ、CSV/JSONはVault全体から生成されます。Obsidian vault連携に備えたfrontmatter形式です。"
+          }
+        }
+      }
+    },
+    "Markdown Links": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Markdownリンク"
+          }
+        }
+      }
+    },
+    "MindVault AI Pro / Team": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MindVault AI Pro / Team"
+          }
+        }
+      }
+    },
+    "MindVault Destination": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MindVaultの場所"
+          }
+        }
+      }
+    },
+    "More AI organization, CloudKit sync path, advanced graph, and AI chat search": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI整理増加、CloudKit同期導線、高度グラフ、AIチャット検索"
+          }
+        }
+      }
+    },
+    "MVP purchase path before production product IDs are connected. Add the StoreKit configuration file to test purchases.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本番商品ID接続前のMVP導線です。StoreKit設定ファイルを追加すると購入テストできます。"
+          }
+        }
+      }
+    },
+    "New Note": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新規メモ"
+          }
+        }
+      }
+    },
+    "No active note": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アクティブなメモはありません"
+          }
+        }
+      }
+    },
+    "No mentions": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メンションはありません"
+          }
+        }
+      }
+    },
+    "No note": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メモなし"
+          }
+        }
+      }
+    },
+    "No Notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メモがありません"
+          }
+        }
+      }
+    },
+    "Not enough monthly AI organization credits.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月間AI整理回数が不足しています。"
+          }
+        }
+      }
+    },
+    "Not Suggested": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未提案"
+          }
+        }
+      }
+    },
+    "Notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メモ"
+          }
+        }
+      }
+    },
+    "On-device AI is available": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オンデバイスAIを利用できます"
+          }
+        }
+      }
+    },
+    "On-device AI is unavailable because Apple Intelligence is not enabled.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligenceが有効ではないため、オンデバイスAIは利用できません。"
+          }
+        }
+      }
+    },
+    "Open": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開く"
+          }
+        }
+      }
+    },
+    "Open %@ graph": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@のグラフを開く"
+          }
+        }
+      }
+    },
+    "Open Graph": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グラフを開く"
+          }
+        }
+      }
+    },
+    "Open MindVault": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MindVaultを開く"
+          }
+        }
+      }
+    },
+    "Open MindVault directly to the graph, notes, search, or settings.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MindVaultのグラフ、メモ、検索、設定を直接開きます。"
+          }
+        }
+      }
+    },
+    "Open note": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メモを開く"
+          }
+        }
+      }
+    },
+    "Organization Draft": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "整理提案"
+          }
+        }
+      }
+    },
+    "Personal Vault": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personal Vault"
+          }
+        }
+      }
+    },
+    "Plan": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プラン"
+          }
+        }
+      }
+    },
+    "Preparing plan information.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プラン情報を準備しています。"
+          }
+        }
+      }
+    },
+    "Preparing Settings": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定を準備中"
+          }
+        }
+      }
+    },
+    "Preview": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プレビュー"
+          }
+        }
+      }
+    },
+    "Privacy": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プライバシー"
+          }
+        }
+      }
+    },
+    "Processed only with on-device Foundation Models. Nothing is sent externally.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オンデバイスのFoundation Modelsのみで処理されます。外部送信は行いません。"
+          }
+        }
+      }
+    },
+    "Project Design Notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロジェクト設計メモ"
+          }
+        }
+      }
+    },
+    "Reading": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "読書"
+          }
+        }
+      }
+    },
+    "Referenced Notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "参照メモ"
+          }
+        }
+      }
+    },
+    "Related candidates are selected with local Natural Language embeddings. Answers are generated only when Foundation Models are available.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "関連候補はNatural Languageのローカル埋め込みで選び、回答生成はFoundation Modelsが利用可能な場合だけ実行します。"
+          }
+        }
+      }
+    },
+    "Related Notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "関連メモ"
+          }
+        }
+      }
+    },
+    "Related notes appear here when AI organization or link analysis finds them.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI整理またはリンク解析で関連メモが見つかると表示されます。"
+          }
+        }
+      }
+    },
+    "Relationship Types": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "つながりの種類"
+          }
+        }
+      }
+    },
+    "Relationships suggested by AI organization.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI整理が関連メモとして提案した関係"
+          }
+        }
+      }
+    },
+    "Relationships that share meaningful tags.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "意味の強いタグを共有する関係"
+          }
+        }
+      }
+    },
+    "Reset Layout": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動配置に戻す"
+          }
+        }
+      }
+    },
+    "Review": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レビュー"
+          }
+        }
+      }
+    },
+    "Review [[%@]]": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "[[%@]] を見直す"
+          }
+        }
+      }
+    },
+    "Run AI Organization": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI整理を実行"
+          }
+        }
+      }
+    },
+    "Save": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        }
+      }
+    },
+    "Search": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検索"
+          }
+        }
+      }
+    },
+    "Search notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メモを検索"
+          }
+        }
+      }
+    },
+    "Search Query Examples": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検索クエリの例"
+          }
+        }
+      }
+    },
+    "Send Unorganized Notes to Suggestions": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未整理メモを整理提案へ送る"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定"
+          }
+        }
+      }
+    },
+    "Settings & Plan": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定・プラン"
+          }
+        }
+      }
+    },
+    "Shared Tags": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共通タグ"
+          }
+        }
+      }
+    },
+    "Shortcut Note": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ショートカットメモ"
+          }
+        }
+      }
+    },
+    "Show %@ graph": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@をグラフで開く"
+          }
+        }
+      }
+    },
+    "Sort": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "並べ替え"
+          }
+        }
+      }
+    },
+    "Start Here": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "はじめに"
+          }
+        }
+      }
+    },
+    "Start writing in Markdown here.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ここにMarkdownで書き始めます。"
+          }
+        }
+      }
+    },
+    "Storage": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存方針"
+          }
+        }
+      }
+    },
+    "StoreKit Subscriptions": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "StoreKitサブスクリプション"
+          }
+        }
+      }
+    },
+    "Summary": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要約"
+          }
+        }
+      }
+    },
+    "System": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システム"
+          }
+        }
+      }
+    },
+    "Tag Design": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タグ設計"
+          }
+        }
+      }
+    },
+    "Tags": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タグ"
+          }
+        }
+      }
+    },
+    "Tags (comma-separated)": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タグ（カンマ区切り）"
+          }
+        }
+      }
+    },
+    "Tap a node to move to the note. The graph focuses on explicit links and AI suggestions.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ノードをタップするとメモへ移動します。明示リンクとAI提案を中心に表示しています。"
+          }
+        }
+      }
+    },
+    "Team": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Team"
+          }
+        }
+      }
+    },
+    "The Foundation Models model is not ready yet.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Foundation Modelsのモデル準備が完了していません。"
+          }
+        }
+      }
+    },
+    "The Foundation Models status could not be checked.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Foundation Modelsの状態を確認できません。"
+          }
+        }
+      }
+    },
+    "The Free plan monthly AI organization limit has been reached.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Freeプランの月間AI整理回数に到達しました。"
+          }
+        }
+      }
+    },
+    "The MVP is local-first and on-device AI only. Notes excluded from AI are not included in organization, embeddings, or AI chat search. CloudKit sync and Team sharing are designed for the next phase.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MVPはローカル保存・オンデバイスAI限定です。AI対象外のメモは整理、埋め込み、AIチャット検索に含めません。CloudKit同期とTeam共有は次フェーズの拡張設計です。"
+          }
+        }
+      }
+    },
+    "The plan is updated from verified StoreKit transactions.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プランはStoreKitの検証済みトランザクションから更新されます。"
+          }
+        }
+      }
+    },
+    "Theme": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テーマ"
+          }
+        }
+      }
+    },
+    "There are no notes in Unorganized or tagged #Unorganized.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未整理コレクションや #未整理 のメモはありません。"
+          }
+        }
+      }
+    },
+    "This device does not support Foundation Models.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このデバイスはFoundation Modelsに対応していません。"
+          }
+        }
+      }
+    },
+    "This is the entry note for learning the basic MindVault flow.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MindVaultの基本操作へ進むための入口メモです。"
+          }
+        }
+      }
+    },
+    "This note is excluded from AI organization, embeddings, and AI chat search.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このメモはAI整理、埋め込み、AIチャット検索から除外されます。"
+          }
+        }
+      }
+    },
+    "This note is excluded from AI processing.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このメモはAI処理対象外です。"
+          }
+        }
+      }
+    },
+    "Title": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タイトル"
+          }
+        }
+      }
+    },
+    "Today": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今日"
+          }
+        }
+      }
+    },
+    "TODAY": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今日"
+          }
+        }
+      }
+    },
+    "Turn Meeting Notes into Action": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会議メモから行動へ"
+          }
+        }
+      }
+    },
+    "Unlinked Mentions": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リンクされていないメンション"
+          }
+        }
+      }
+    },
+    "Unorganized": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未整理"
+          }
+        }
+      }
+    },
+    "Unorganized Notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未整理メモ"
+          }
+        }
+      }
+    },
+    "Unresolved Links": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未解決リンク"
+          }
+        }
+      }
+    },
+    "Unresolved Links (comma-separated)": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未解決リンク（カンマ区切り）"
+          }
+        }
+      }
+    },
+    "Untitled Note": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無題のメモ"
+          }
+        }
+      }
+    },
+    "Use AI Organization": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI整理を使う"
+          }
+        }
+      }
+    },
+    "Vault": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vault"
+          }
+        }
+      }
+    },
+    "Vector Search Candidates": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ベクトル検索候補"
+          }
+        }
+      }
+    },
+    "View": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示"
+          }
+        }
+      }
+    },
+    "Visible Links": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示リンク"
+          }
+        }
+      }
+    },
+    "Weekly Review": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "週次レビュー"
+          }
+        }
+      }
+    },
+    "Welcome to MindVault": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MindVaultへようこそ"
+          }
+        }
+      }
+    },
+    "Why It Connects": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "つながる理由"
+          }
+        }
+      }
+    },
+    "Work": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仕事"
+          }
+        }
+      }
+    },
+    "Workspace": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ワークスペース"
+          }
+        }
+      }
+    },
+    "Writing Notes": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メモを書く基本"
+          }
+        }
+      }
+    },
+    "You can import up to %lld notes at once (selected: %lld).": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一度にインポートできるメモ数は%1$lld件までです（選択: %2$lld件）。"
+          }
+        }
+      }
+    },
+    "Zoom In": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拡大"
+          }
+        }
+      }
+    },
+    "Zoom Out": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "縮小"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.2"
+}

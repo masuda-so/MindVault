@@ -1,0 +1,127 @@
+{
+  "identifier" : "MINDVAULTAI-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions" : [
+  ],
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "3000000001",
+      "localizations" : [
+        {
+          "description" : "Adds 500 on-device AI organization credits for MindVault AI.",
+          "displayName" : "AI Credits 500",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "MindVault AIのオンデバイスAI整理クレジットを500回分追加します。",
+          "displayName" : "AIクレジット 500",
+          "locale" : "ja_JP"
+        }
+      ],
+      "productID" : "mindvault.ai.credits.500",
+      "referenceName" : "AI Credits 500",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "3000000002",
+      "localizations" : [
+        {
+          "description" : "Adds 50 GB of future cloud sync storage capacity for MindVault AI.",
+          "displayName" : "Storage 50 GB",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "MindVault AIの将来クラウド同期用ストレージ容量を50GB追加します。",
+          "displayName" : "ストレージ 50GB",
+          "locale" : "ja_JP"
+        }
+      ],
+      "productID" : "mindvault.storage.50gb",
+      "referenceName" : "Storage 50 GB",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "1000000001",
+      "localizations" : [
+        {
+          "locale" : "en_US",
+          "name" : "MindVault AI"
+        },
+        {
+          "locale" : "ja_JP",
+          "name" : "マインドヴォルトAI"
+        }
+      ],
+      "name" : "MindVault AI",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+          ],
+          "codeOffers" : [
+          ],
+          "displayPrice" : "29.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "2000000002",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Team knowledge base, administrator controls, and shared workspace roadmap access.",
+              "displayName" : "MindVault AI Team",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "共有ナレッジベース、管理者機能、共同編集ロードマップを含むTeamプランです。",
+              "displayName" : "MindVault AI Team",
+              "locale" : "ja_JP"
+            }
+          ],
+          "productID" : "mindvault.team.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Team Monthly",
+          "subscriptionGroupID" : "1000000001",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+          ],
+          "codeOffers" : [
+          ],
+          "displayPrice" : "9.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "2000000001",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "More AI organization runs, AI chat search, advanced graph analysis, and cloud sync roadmap access.",
+              "displayName" : "MindVault AI Pro",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "AI整理回数増加、AIチャット検索、高度グラフ分析、クラウド同期ロードマップを含むProプランです。",
+              "displayName" : "MindVault AI Pro",
+              "locale" : "ja_JP"
+            }
+          ],
+          "productID" : "mindvault.pro.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro Monthly",
+          "subscriptionGroupID" : "1000000001",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

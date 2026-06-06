@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bgGlow" cx="63%" cy="64%" r="54%">
+      <stop offset="0" stop-color="#6B5434"/>
+      <stop offset=".42" stop-color="#161512"/>
+      <stop offset="1" stop-color="#050607"/>
+    </radialGradient>
+    <linearGradient id="front" x1="230" y1="310" x2="640" y2="780" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF3D7"/>
+      <stop offset=".58" stop-color="#D6B270"/>
+      <stop offset="1" stop-color="#8B6A38"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="404" y1="238" x2="720" y2="650" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E9DFCB"/>
+      <stop offset="1" stop-color="#7B684F"/>
+    </linearGradient>
+    <linearGradient id="back" x1="496" y1="185" x2="785" y2="584" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A9A196"/>
+      <stop offset="1" stop-color="#3D3B38"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="36" stdDeviation="34" flood-color="#000000" flood-opacity=".54"/>
+    </filter>
+    <filter id="warmEdge" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#D9983E" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bgGlow)"/>
+  <path d="M678 190c37 17 69 32 96 46 27 13 42 40 42 73v330c0 45-47 74-86 53L539 592c-28-15-46-44-46-76V255c0-48 50-79 93-57l92 46V190Z"
+        fill="url(#back)" opacity=".62"/>
+  <path d="M579 235c38 18 73 35 106 51 29 14 48 44 48 77v343c0 48-51 78-92 54L426 638c-29-17-47-47-47-80V303c0-51 54-83 98-57l102 59v-70Z"
+        fill="url(#mid)" opacity=".78"/>
+  <path d="M354 311h200c70 0 127 57 127 127v275c0 57-46 103-103 103H354c-70 0-127-57-127-127V438c0-70 57-127 127-127Z"
+        fill="url(#front)" filter="url(#softShadow)"/>
+  <path d="M354 311h200c70 0 127 57 127 127v275c0 57-46 103-103 103H354c-70 0-127-57-127-127V438c0-70 57-127 127-127Z"
+        fill="none" stroke="#FFF5DE" stroke-width="8" opacity=".64" filter="url(#warmEdge)"/>
+  <path d="M341 449h213" stroke="#5E4A2E" stroke-width="28" stroke-linecap="round" opacity=".22"/>
+  <path d="M341 540h245" stroke="#5E4A2E" stroke-width="28" stroke-linecap="round" opacity=".16"/>
+</svg>
