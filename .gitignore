@@ -5,3 +5,7 @@ xcuserdata/
 build/
 __pycache__/
 *.pyc
+
+# Material belonging to the GratefulMoments app (kept on disk, not part of MindVault)
+AppStoreAssets/*/SmallThanksDiary/
+AppStoreAssets/Scripts/*small_thanks*
