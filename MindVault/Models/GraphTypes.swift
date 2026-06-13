@@ -48,6 +48,27 @@ struct GraphLink: Identifiable, Hashable {
     var targetID: UUID
     var kind: LinkKind
     var weight: Double
+    var reason: GraphConnectionReason
+}
+
+struct GraphConnectionReason: Hashable {
+    var summary: String
+    var evidence: String
+    var confidence: Double
+    var source: GraphConnectionReasonSource
+
+    var isEvaluationReady: Bool {
+        !summary.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            && !evidence.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            && confidence > 0
+    }
+}
+
+enum GraphConnectionReasonSource: String, Hashable {
+    case explicitWikiLink
+    case explicitMarkdownLink
+    case aiSuggestion
+    case sharedTags
 }
 
 struct KnowledgeGraph: Equatable {

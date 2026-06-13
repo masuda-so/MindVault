@@ -8,6 +8,8 @@ final class SubscriptionService {
     static let proMonthlyProductID = "mindvault.pro.monthly"
     static let teamMonthlyProductID = "mindvault.team.monthly"
     static let subscriptionGroupID = "mindvault.ai.subscription"
+    static let privacyPolicyURL = URL(string: "https://masuda-so.github.io/MindVault/privacy/")!
+    static let termsOfUseURL = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
 
     var currentPlan: SubscriptionPlan = .free
     var aiCreditBalance: Int = 0
@@ -36,6 +38,11 @@ final class SubscriptionService {
         entitlement.plan = verifiedPlan
         entitlement.storageLimitGB = storageLimitGB(for: verifiedPlan)
         entitlement.updatedAt = .now
+    }
+
+    func restorePurchases(_ entitlement: SubscriptionEntitlement?) async throws {
+        try await AppStore.sync()
+        await refreshVerifiedEntitlement(entitlement)
     }
 
 #if DEBUG

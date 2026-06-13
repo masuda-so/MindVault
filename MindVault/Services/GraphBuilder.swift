@@ -7,16 +7,39 @@ enum GraphBuilder {
         var graphLinks: [GraphLink] = []
 
         for link in links {
-            guard let targetID = link.targetNoteID, noteByID[link.sourceNoteID] != nil, noteByID[targetID] != nil else {
+            guard let targetID = link.targetNoteID,
+                  let sourceNote = noteByID[link.sourceNoteID],
+                  let targetNote = noteByID[targetID]
+            else {
                 continue
             }
-            graphLinks.append(GraphLink(id: link.id, sourceID: link.sourceNoteID, targetID: targetID, kind: link.kind, weight: 1))
+            graphLinks.append(
+                GraphLink(
+                    id: link.id,
+                    sourceID: link.sourceNoteID,
+                    targetID: targetID,
+                    kind: link.kind,
+                    weight: 1,
+                    reason: explicitLinkReason(link: link, sourceNote: sourceNote, targetNote: targetNote)
+                )
+            )
         }
 
         graphLinks.append(
             contentsOf: aiEdges
-                .filter { noteByID[$0.sourceNoteID] != nil && noteByID[$0.targetNoteID] != nil }
-                .map { GraphLink(id: $0.id, sourceID: $0.sourceNoteID, targetID: $0.targetNoteID, kind: $0.kind, weight: $0.weight) }
+                .compactMap { edge in
+                    guard let sourceNote = noteByID[edge.sourceNoteID], let targetNote = noteByID[edge.targetNoteID] else {
+                        return nil
+                    }
+                    return GraphLink(
+                        id: edge.id,
+                        sourceID: edge.sourceNoteID,
+                        targetID: edge.targetNoteID,
+                        kind: edge.kind,
+                        weight: edge.weight,
+                        reason: aiLinkReason(edge: edge, sourceNote: sourceNote, targetNote: targetNote)
+                    )
+                }
         )
 
         graphLinks.append(contentsOf: tagCooccurrenceLinks(notes: notes))
@@ -70,7 +93,12 @@ enum GraphBuilder {
                         sourceID: notes[sourceIndex].id,
                         targetID: notes[targetIndex].id,
                         kind: .tagCooccurrence,
-                        weight: Double(sharedTags.count) * 0.35
+                        weight: Double(sharedTags.count) * 0.35,
+                        reason: sharedTagReason(
+                            tags: sharedTags,
+                            sourceNote: notes[sourceIndex],
+                            targetNote: notes[targetIndex]
+                        )
                     )
                 )
             }
@@ -82,6 +110,70 @@ enum GraphBuilder {
         Set(first.tags)
             .intersection(second.tags)
             .filter { !genericTagNames.contains($0) }
+    }
+
+    private static func explicitLinkReason(link: NoteLink, sourceNote: Note, targetNote: Note) -> GraphConnectionReason {
+        switch link.kind {
+        case .wiki:
+            return GraphConnectionReason(
+                summary: "Explicit wiki link",
+                evidence: "\(sourceNote.title) links to [[\(link.rawTarget.isEmpty ? targetNote.title : link.rawTarget)]].",
+                confidence: 1,
+                source: .explicitWikiLink
+            )
+        case .markdown:
+            let label = link.displayText.isEmpty ? targetNote.title : link.displayText
+            return GraphConnectionReason(
+                summary: "Explicit Markdown link",
+                evidence: "\(sourceNote.title) links with [\(label)](\(link.rawTarget)).",
+                confidence: 1,
+                source: .explicitMarkdownLink
+            )
+        case .aiRelated:
+            return aiLinkReason(weight: 0.72, sourceNote: sourceNote, targetNote: targetNote)
+        case .tagCooccurrence:
+            return sharedTagReason(
+                tags: significantSharedTags(between: sourceNote, and: targetNote),
+                sourceNote: sourceNote,
+                targetNote: targetNote
+            )
+        }
+    }
+
+    private static func aiLinkReason(edge: GraphEdge, sourceNote: Note, targetNote: Note) -> GraphConnectionReason {
+        aiLinkReason(weight: edge.weight, sourceNote: sourceNote, targetNote: targetNote)
+    }
+
+    private static func aiLinkReason(weight: Double, sourceNote: Note, targetNote: Note) -> GraphConnectionReason {
+        let metadata = sourceNote.aiMetadata
+        let summary = metadata?.summary.trimmingCharacters(in: .whitespacesAndNewlines)
+        let acceptedByMetadata = metadata?.relatedNoteIDs.contains(targetNote.id) == true
+        let evidence: String
+        if let summary, !summary.isEmpty {
+            evidence = "\(sourceNote.title) AI summary: \(summary)"
+        } else if acceptedByMetadata {
+            evidence = "\(sourceNote.title) AI organization lists \(targetNote.title) as a related note."
+        } else {
+            evidence = "Stored AI relationship edge between \(sourceNote.title) and \(targetNote.title)."
+        }
+
+        return GraphConnectionReason(
+            summary: acceptedByMetadata ? "AI suggested related note" : "AI relationship edge",
+            evidence: evidence,
+            confidence: min(max(weight, 0.01), 1),
+            source: .aiSuggestion
+        )
+    }
+
+    private static func sharedTagReason(tags: Set<String>, sourceNote: Note, targetNote: Note) -> GraphConnectionReason {
+        let sortedTags = tags.sorted { $0.localizedCompare($1) == .orderedAscending }
+        let tagList = sortedTags.isEmpty ? "no significant shared tags" : sortedTags.joined(separator: ", ")
+        return GraphConnectionReason(
+            summary: "Shared meaningful tags",
+            evidence: "\(sourceNote.title) and \(targetNote.title) share: \(tagList).",
+            confidence: min(max(Double(sortedTags.count) * 0.35, 0.01), 1),
+            source: .sharedTags
+        )
     }
 
     private static let genericTagNames: Set<String> = [

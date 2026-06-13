@@ -28,7 +28,7 @@ final class MindVaultUITests: XCTestCase {
 
         XCTAssertTrue(app.tabBars.buttons["検索"].waitForExistence(timeout: 60))
         app.tabBars.buttons["検索"].tap()
-        XCTAssertTrue(app.staticTexts["ローカルノートだけで質問する"].waitForExistence(timeout: 20))
+        XCTAssertTrue(app.staticTexts["AIチャット検索"].waitForExistence(timeout: 20))
         XCTAssertTrue(app.staticTexts["ベクトル検索候補"].waitForExistence(timeout: 20))
 
         XCTAssertTrue(app.tabBars.buttons["設定"].waitForExistence(timeout: 20))
@@ -36,6 +36,9 @@ final class MindVaultUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["外観"].waitForExistence(timeout: 20))
         XCTAssertTrue(app.staticTexts["プライバシー"].waitForExistence(timeout: 20))
         XCTAssertTrue(app.staticTexts["現在のプラン"].waitForExistence(timeout: 20))
+        XCTAssertTrue(app.buttons["restorePurchasesButton"].waitForExistence(timeout: 20))
+        XCTAssertTrue(app.buttons["Privacy Policy"].waitForExistence(timeout: 20))
+        XCTAssertTrue(app.buttons["Terms of Use (EULA)"].waitForExistence(timeout: 20))
     }
 
     private func launchJapaneseApp() -> XCUIApplication {

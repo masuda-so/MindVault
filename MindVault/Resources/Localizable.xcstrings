@@ -1032,12 +1032,12 @@
         }
       }
     },
-    "MVP purchase path before production product IDs are connected. Add the StoreKit configuration file to test purchases.": {
+    "Choose a monthly plan to unlock higher AI organization limits, AI chat search, advanced graph features, and the Team roadmap.": {
       "localizations": {
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "本番商品ID接続前のMVP導線です。StoreKit設定ファイルを追加すると購入テストできます。"
+            "value": "月額プランを選ぶと、AI整理の上限拡張、AIチャット検索、高度なグラフ機能、Teamロードマップを利用できます。"
           }
         }
       }

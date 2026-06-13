@@ -105,7 +105,7 @@ struct OpenMindVaultDestinationIntent: AppIntent {
 
 struct CreateMindVaultDraftIntent: AppIntent {
     static var title: LocalizedStringResource = "Create MindVault Note"
-    static var description = IntentDescription("Create a new Markdown note draft in MindVault from Shortcuts or Siri.")
+    static var description = IntentDescription("Create a new Markdown note draft in MindVault from Shortcuts.")
     static var supportedModes: IntentModes { .foreground(.immediate) }
 
     @Parameter(title: "Title")

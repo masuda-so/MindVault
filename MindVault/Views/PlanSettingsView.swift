@@ -5,6 +5,7 @@ import SwiftUI
 struct PlanSettingsView: View {
     @Environment(SubscriptionService.self) private var subscriptionService
     @AppStorage("vaultAppearance") private var vaultAppearanceRawValue = VaultAppearance.system.rawValue
+    @State private var restoreState = RestoreState.idle
 
     @Bindable var entitlement: SubscriptionEntitlement
     let notes: [Note]
@@ -117,14 +118,57 @@ struct PlanSettingsView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("MindVault AI Pro / Team")
                             .font(.headline)
-                        Text("MVP purchase path before production product IDs are connected. Add the StoreKit configuration file to test purchases.")
+                        Text("Choose a monthly plan to unlock higher AI organization limits, AI chat search, advanced graph features, and the Team roadmap.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
                 }
                 .frame(minHeight: 220)
+                .storeButton(.visible, for: .restorePurchases, .policies)
+                .subscriptionStorePolicyDestination(
+                    url: SubscriptionService.privacyPolicyURL,
+                    for: .privacyPolicy
+                )
+                .subscriptionStorePolicyDestination(
+                    url: SubscriptionService.termsOfUseURL,
+                    for: .termsOfService
+                )
+
+                purchaseSupportActions
             }
         }
+    }
+
+    private var purchaseSupportActions: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Button {
+                restorePurchases()
+            } label: {
+                Label(restoreState.buttonTitle, systemImage: "arrow.clockwise.circle")
+            }
+            .buttonStyle(.bordered)
+            .disabled(restoreState.isRestoring)
+            .accessibilityIdentifier("restorePurchasesButton")
+
+            if let message = restoreState.message {
+                Text(message)
+                    .font(.caption)
+                    .foregroundStyle(restoreState.isError ? .red : .secondary)
+            }
+
+            HStack(spacing: 14) {
+                Link(destination: SubscriptionService.privacyPolicyURL) {
+                    Label("Privacy Policy", systemImage: "lock.shield")
+                }
+
+                Link(destination: SubscriptionService.termsOfUseURL) {
+                    Label("Terms of Use (EULA)", systemImage: "doc.text")
+                }
+            }
+            .font(.caption)
+            .foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private func stat(_ title: String, _ value: String) -> some View {
@@ -160,5 +204,55 @@ struct PlanSettingsView: View {
             get: { currentAppearance },
             set: { vaultAppearanceRawValue = $0.rawValue }
         )
+    }
+
+    private func restorePurchases() {
+        restoreState = .restoring
+        Task {
+            do {
+                try await subscriptionService.restorePurchases(entitlement)
+                restoreState = .restored
+            } catch {
+                restoreState = .failed(error.localizedDescription)
+            }
+        }
+    }
+}
+
+private enum RestoreState: Equatable {
+    case idle
+    case restoring
+    case restored
+    case failed(String)
+
+    var buttonTitle: LocalizedStringKey {
+        switch self {
+        case .idle, .restored, .failed:
+            "Restore Purchases"
+        case .restoring:
+            "Restoring Purchases..."
+        }
+    }
+
+    var message: LocalizedStringKey? {
+        switch self {
+        case .idle, .restoring:
+            nil
+        case .restored:
+            "Purchases restored. Your plan was refreshed from verified StoreKit transactions."
+        case .failed(let description):
+            LocalizedStringKey("Restore failed: \(description)")
+        }
+    }
+
+    var isRestoring: Bool {
+        self == .restoring
+    }
+
+    var isError: Bool {
+        if case .failed = self {
+            return true
+        }
+        return false
     }
 }

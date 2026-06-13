@@ -48,6 +48,41 @@ final class MindVaultCoreTests: XCTestCase {
         XCTAssertTrue(graph.links.contains { $0.kind == .tagCooccurrence })
     }
 
+    func testGraphBuilderAddsEvaluationReadyConnectionReasons() {
+        let first = Note(title: "価格案", markdown: "", collectionName: "プロダクト", tags: ["価格戦略", "SaaS"])
+        let second = Note(title: "収益モデル", markdown: "", collectionName: "プロダクト", tags: ["価格戦略"])
+        let wiki = NoteLink(sourceNoteID: first.id, targetNoteID: second.id, rawTarget: second.title, displayText: second.title, kind: .wiki)
+
+        let graph = GraphBuilder.build(notes: [first, second], links: [wiki], aiEdges: [])
+        let wikiReason = graph.links.first { $0.kind == .wiki }?.reason
+        let tagReason = graph.links.first { $0.kind == .tagCooccurrence }?.reason
+
+        XCTAssertEqual(wikiReason?.source, .explicitWikiLink)
+        XCTAssertEqual(wikiReason?.confidence, 1)
+        XCTAssertEqual(wikiReason?.isEvaluationReady, true)
+        XCTAssertTrue(wikiReason?.evidence.contains("[[収益モデル]]") == true)
+        XCTAssertEqual(tagReason?.source, .sharedTags)
+        XCTAssertEqual(tagReason?.isEvaluationReady, true)
+        XCTAssertTrue(tagReason?.evidence.contains("価格戦略") == true)
+    }
+
+    func testGraphBuilderUsesAISummaryAsConnectionEvidence() {
+        let source = Note(title: "追加した価格メモ", markdown: "", collectionName: "未整理")
+        let target = Note(title: "価格案とProプラン", markdown: "", collectionName: "プロダクト")
+        source.aiMetadata?.summary = "価格と収益モデルを整理するメモです。"
+        source.aiMetadata?.relatedNoteIDs = [target.id]
+        let edge = GraphEdge(sourceNoteID: source.id, targetNoteID: target.id, kind: .aiRelated, weight: 0.72)
+
+        let graph = GraphBuilder.build(notes: [source, target], links: [], aiEdges: [edge])
+        let reason = graph.links.first?.reason
+
+        XCTAssertEqual(reason?.source, .aiSuggestion)
+        XCTAssertEqual(reason?.summary, "AI suggested related note")
+        XCTAssertEqual(reason?.isEvaluationReady, true)
+        XCTAssertTrue(reason?.evidence.contains("価格と収益モデル") == true)
+        XCTAssertEqual(reason?.confidence, 0.72)
+    }
+
     func testGraphBuilderIgnoresGenericTagsForCooccurrenceEdges() {
         let first = Note(title: "入口", markdown: "", collectionName: "使い方", tags: ["使い方"])
         let second = Note(title: "基本", markdown: "", collectionName: "使い方", tags: ["使い方"])

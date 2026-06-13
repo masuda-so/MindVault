@@ -346,7 +346,7 @@ struct GraphWorkspaceView: View {
                     .lineLimit(1)
                 Text(reason.summary)
                     .font(.caption2)
-                    .lineLimit(1)
+                    .lineLimit(2)
             }
                 .foregroundStyle(ObsidianWorkspaceStyle.secondaryText)
             Spacer()
@@ -484,7 +484,7 @@ struct GraphWorkspaceView: View {
             .compactMap { link in
                 let otherID = link.sourceID == selectedNoteID ? link.targetID : link.sourceID
                 guard let noteTitle = title(for: otherID) else { return nil }
-                return ConnectionReason(noteTitle: noteTitle, kind: link.kind, summary: edgeDescription(for: link.kind))
+                return ConnectionReason(noteTitle: noteTitle, kind: link.kind, summary: link.reason.evidence)
             }
     }
 
