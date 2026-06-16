@@ -112,6 +112,11 @@ xcodebuild test \
 
 ## Current Status
 
+## Public Pages
+
+This repository is for application source, release preparation, and App Store materials. GitHub Pages is intentionally disabled here. Public support and privacy pages should be managed in a dedicated Pages repository before publication.
+
+
 - App Store Connect submission is being prepared (`PREPARE_FOR_SUBMISSION`).
 - Initial submission is planned to attach `mindvault.pro.monthly` and `mindvault.team.monthly` to the app version.
 - See `Docs/` for submission details and review notes.
