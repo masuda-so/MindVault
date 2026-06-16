@@ -22,6 +22,29 @@ final class MindVaultUITests: XCTestCase {
         XCTAssertFalse(app.textViews["markdownEditor"].exists)
     }
 
+    func testPreviewWikiLinkOpensLinkedNote() {
+        continueAfterFailure = false
+        let app = launchJapaneseApp()
+
+        openWelcomeNote(in: app)
+
+        let writingLink = app.links["[[メモを書く基本]]"]
+        let plainWritingLink = app.links["メモを書く基本"]
+        if writingLink.waitForExistence(timeout: 5) {
+            writingLink.tap()
+        } else if plainWritingLink.waitForExistence(timeout: 1) {
+            plainWritingLink.tap()
+        } else {
+            let instruction = app.staticTexts
+                .matching(NSPredicate(format: "label CONTAINS %@", "メモを書く基本"))
+                .firstMatch
+            XCTAssertTrue(instruction.waitForExistence(timeout: 20))
+            instruction.coordinate(withNormalizedOffset: CGVector(dx: 0.23, dy: 0.28)).tap()
+        }
+
+        XCTAssertTrue(app.staticTexts["書き方のコツ"].waitForExistence(timeout: 20))
+    }
+
     func testSearchAndSettingsTabsRender() {
         continueAfterFailure = false
         let app = launchJapaneseApp()

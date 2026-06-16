@@ -11,6 +11,7 @@ struct NoteEditorView: View {
     let links: [NoteLink]
     let entitlement: SubscriptionEntitlement?
     let showsInspectorButton: Bool
+    let onOpenWikiLink: ((String) -> Void)?
 
     @State private var draftMarkdown: String
     @State private var showsPreview = true
@@ -23,13 +24,15 @@ struct NoteEditorView: View {
         allNotes: [Note],
         links: [NoteLink],
         entitlement: SubscriptionEntitlement?,
-        showsInspectorButton: Bool = false
+        showsInspectorButton: Bool = false,
+        onOpenWikiLink: ((String) -> Void)? = nil
     ) {
         self.note = note
         self.allNotes = allNotes
         self.links = links
         self.entitlement = entitlement
         self.showsInspectorButton = showsInspectorButton
+        self.onOpenWikiLink = onOpenWikiLink
         _draftMarkdown = State(initialValue: note.markdown)
     }
 
@@ -38,7 +41,7 @@ struct NoteEditorView: View {
             editorHeader
             Divider()
             if showsPreview {
-                MarkdownPreview(markdown: draftMarkdown)
+                MarkdownPreview(markdown: draftMarkdown, onOpenWikiLink: openWikiLink)
             } else {
                 TextEditor(text: $draftMarkdown)
                     .font(.system(.body, design: .monospaced))
@@ -304,10 +307,20 @@ struct NoteEditorView: View {
         draftMarkdown += "\n\n- Review [[\(note.title)]]"
         scheduleAutosave()
     }
+
+    private func openWikiLink(_ target: String) {
+        let normalizedTarget = target.normalizedLinkTarget
+        guard allNotes.contains(where: { $0.title.normalizedLinkTarget == normalizedTarget }) else {
+            return
+        }
+        saveDraft()
+        onOpenWikiLink?(target)
+    }
 }
 
 private struct MarkdownPreview: View {
     let markdown: String
+    let onOpenWikiLink: (String) -> Void
 
     var body: some View {
         ScrollView {
@@ -332,15 +345,80 @@ private struct MarkdownPreview: View {
             Text(trimmed.replacingOccurrences(of: "# ", with: ""))
                 .font(.title.weight(.bold))
         } else if trimmed.hasPrefix("- ") {
-            Text("• \(trimmed.dropFirst(2))")
+            linkedText("• \(trimmed.dropFirst(2))")
                 .font(.body)
         } else if trimmed.contains("[[") {
-            Text(trimmed)
+            linkedText(trimmed)
                 .font(.body)
-                .foregroundStyle(.mint)
         } else {
             Text(trimmed.isEmpty ? " " : trimmed)
                 .font(.body)
         }
+    }
+
+    private func linkedText(_ text: String) -> some View {
+        Text(Self.linkedAttributedString(for: text))
+            .tint(.mint)
+            .environment(\.openURL, OpenURLAction { url in
+                guard
+                    url.scheme == "mindvault",
+                    url.host == "wiki-link",
+                    let target = URLComponents(url: url, resolvingAgainstBaseURL: false)?
+                        .queryItems?
+                        .first(where: { $0.name == "target" })?
+                        .value
+                else {
+                    return .discarded
+                }
+                onOpenWikiLink(target)
+                return .handled
+            })
+    }
+
+    private static func linkedAttributedString(for text: String) -> AttributedString {
+        guard let regex = try? NSRegularExpression(pattern: #"\[\[([^\]|\n]+)(?:\|([^\]\n]+))?\]\]"#) else {
+            return AttributedString(text)
+        }
+
+        var result = AttributedString()
+        let nsText = text as NSString
+        let matches = regex.matches(in: text, range: NSRange(location: 0, length: nsText.length))
+        var cursor = 0
+
+        for match in matches {
+            if match.range.location > cursor {
+                result += AttributedString(nsText.substring(with: NSRange(location: cursor, length: match.range.location - cursor)))
+            }
+
+            let rawTarget = nsText.substring(with: match.range(at: 1)).trimmingCharacters(in: .whitespacesAndNewlines)
+            let displayText: String
+            if match.range(at: 2).location != NSNotFound {
+                displayText = nsText.substring(with: match.range(at: 2)).trimmingCharacters(in: .whitespacesAndNewlines)
+            } else {
+                displayText = nsText.substring(with: match.range)
+            }
+
+            var linkedText = AttributedString(displayText)
+            if let url = wikiLinkURL(for: rawTarget) {
+                linkedText.link = url
+            }
+            linkedText.foregroundColor = .mint
+            result += linkedText
+            cursor = match.range.location + match.range.length
+        }
+
+        if cursor < nsText.length {
+            result += AttributedString(nsText.substring(from: cursor))
+        }
+
+        return result
+    }
+
+    private static func wikiLinkURL(for target: String) -> URL? {
+        var components = URLComponents()
+        components.scheme = "mindvault"
+        components.host = "wiki-link"
+        components.queryItems = [URLQueryItem(name: "target", value: target)]
+        return components.url
     }
 }

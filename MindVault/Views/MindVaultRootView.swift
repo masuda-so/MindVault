@@ -234,7 +234,13 @@ struct MindVaultRootView: View {
         case .editor:
             if let selectedNote {
                 HStack(spacing: 0) {
-                    NoteEditorView(note: selectedNote, allNotes: notes, links: links, entitlement: entitlement)
+                    NoteEditorView(
+                        note: selectedNote,
+                        allNotes: notes,
+                        links: links,
+                        entitlement: entitlement,
+                        onOpenWikiLink: openLinkedNote
+                    )
                     Divider()
                     AIInspectorView(note: selectedNote, allNotes: notes, entitlement: entitlement)
                 }
@@ -260,7 +266,8 @@ struct MindVaultRootView: View {
                 allNotes: notes,
                 links: links,
                 entitlement: entitlement,
-                showsInspectorButton: true
+                showsInspectorButton: true,
+                onOpenWikiLink: openLinkedNote
             )
         }
     }
@@ -344,6 +351,18 @@ struct MindVaultRootView: View {
     private func openCompactEditor() {
         mode = .editor
         isCompactEditorPresented = selectedNoteID != nil
+    }
+
+    private func openLinkedNote(_ target: String) {
+        let normalizedTarget = target.normalizedLinkTarget
+        guard let linkedNote = notes.first(where: { $0.title.normalizedLinkTarget == normalizedTarget }) else {
+            return
+        }
+        selectedNoteID = linkedNote.id
+        mode = .editor
+        if horizontalSizeClass == .compact {
+            isCompactEditorPresented = true
+        }
     }
 
     private func handlePendingAppIntentRequest() {
