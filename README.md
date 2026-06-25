@@ -1,14 +1,18 @@
 # MindVault
 
-[日本語版](README.ja.md)
+[English](README.en.md) · [日本語](README.ja.md)
 
-![Swift](https://img.shields.io/badge/Swift-5.9-orange)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-4-blue)
-![SwiftData](https://img.shields.io/badge/SwiftData-1.0-green)
-![Platform](https://img.shields.io/badge/iOS%2F%2FiPadOS-17.0%2B-lightgrey)
+![Platform](https://img.shields.io/badge/Platform-iOS%20%2F%20iPadOS%2017.0%2B-blue)
+![Swift](https://img.shields.io/badge/Swift-SwiftUI%20%7C%20SwiftData-orange)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 A local-first Markdown notebook that stores notes primarily on device and builds an explainable knowledge graph from links, tags, and on-device AI suggestions.
+
+---
+
+## About
+
+**MindVault** is a local-first Markdown notebook for people who want their ideas to grow. Write in plain Markdown, link any two notes together, and your knowledge turns into an explainable graph you can explore — with on-device AI that suggests what to read next.
 
 ## Key Features
 
@@ -68,20 +72,12 @@ Subscriptions are Free / Pro / Team.
 
 Future extensions may include AI credits and extra storage tiers.
 
-## User Flow
-
-1. Launch into the **knowledge graph**.
-2. Tap nodes to browse related notes.
-3. Edits, links, and tags refresh graph connections.
-4. AI suggestions are proposed per note and applied only after approval.
-5. Settings expose plan usage, privacy, and StoreKit subscription options.
-
-## Development
+## Getting Started
 
 ### Requirements
 
-- Xcode 15+
-- iOS Simulator or physical iOS device
+- Xcode 15 or later
+- iOS Simulator or a physical iOS device
 - Local StoreKit testing: `MindVault/Configuration/MindVault.storekit`
 
 ### Build and Run
@@ -110,17 +106,29 @@ xcodebuild test \
   -only-testing:MindVaultUITests/MindVaultUITests/testLaunchShowsGraphFirstAndCanOpenAIInspector
 ```
 
-## Current Status
+## Usage
 
-## Public Pages
+1. Launch into the **knowledge graph**.
+2. Tap nodes to browse related notes.
+3. Edits, links, and tags refresh graph connections.
+4. AI suggestions are proposed per note and applied only after approval.
+5. Settings expose plan usage, privacy, and StoreKit subscription options.
 
-This repository is for application source, release preparation, and App Store materials. GitHub Pages is intentionally disabled here. Public support and privacy pages should be managed in a dedicated Pages repository before publication.
+## Status
 
+Preparing for App Store Connect submission (`PREPARE_FOR_SUBMISSION`). The initial submission is planned to attach `mindvault.pro.monthly` and `mindvault.team.monthly` to the app version. See `Docs/` for submission details and review notes. GitHub Pages is intentionally disabled for this source repository.
 
-- App Store Connect submission is being prepared (`PREPARE_FOR_SUBMISSION`).
-- Initial submission is planned to attach `mindvault.pro.monthly` and `mindvault.team.monthly` to the app version.
-- See `Docs/` for submission details and review notes.
+## Support
+
+- Questions or bug reports: open a [GitHub Issue](https://github.com/masuda-so/MindVault/issues)
+- Email: so.masuda.2003@pm.me
 
 ## License
 
-MIT
+Licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+## Maintainer
+
+- **Soh Masuda** (増田創) — original developer
+
+Contributions are welcome. See [CONTRIBUTING](./CONTRIBUTING.md).
