@@ -20,6 +20,7 @@ struct MindVaultRootView: View {
     @State private var selectedTag: String?
     @State private var dateFilter: NoteDateFilter = .all
     @AppStorage("vaultAppearance") private var vaultAppearanceRawValue = VaultAppearance.system.rawValue
+    @State private var noteCreatedFeedback = 0
 
     private var selectedNote: Note? {
         notes.first { $0.id == selectedNoteID } ?? defaultSelectedNote
@@ -63,6 +64,7 @@ struct MindVaultRootView: View {
             handlePendingAppIntentRequest()
         }
         .preferredColorScheme(vaultAppearance.colorScheme)
+        .sensoryFeedback(.success, trigger: noteCreatedFeedback)
     }
 
     private var vaultAppearance: VaultAppearance {
@@ -293,6 +295,7 @@ struct MindVaultRootView: View {
         MarkdownIndexingService.reindex(note: note, allNotes: notes + [note], context: modelContext)
         EmbeddingSearchService.upsertEmbedding(for: note)
         try? modelContext.save()
+        noteCreatedFeedback += 1
         selectedNoteID = note.id
         mode = openEditor ? .editor : .graph
     }
@@ -321,6 +324,7 @@ struct MindVaultRootView: View {
         modelContext.insert(note)
         MarkdownIndexingService.reindex(note: note, allNotes: notes + [note], context: modelContext)
         try? modelContext.save()
+        noteCreatedFeedback += 1
         selectedNoteID = note.id
         mode = .editor
     }
