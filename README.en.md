@@ -4,7 +4,7 @@
 
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%2F%20iPadOS%2017.0%2B-blue)
 ![Swift](https://img.shields.io/badge/Swift-SwiftUI%20%7C%20SwiftData-orange)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![License](https://img.shields.io/badge/License-Apache%202.0-lightgrey)
 
 A local-first Markdown notebook that stores notes primarily on device and builds an explainable knowledge graph from links, tags, and on-device AI suggestions.
 
@@ -125,7 +125,7 @@ Preparing for App Store Connect submission (`PREPARE_FOR_SUBMISSION`). The initi
 
 ## License
 
-Licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+Licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) file for details.
 
 ## Maintainer
 
