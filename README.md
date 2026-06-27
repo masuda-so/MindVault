@@ -1,7 +1,5 @@
 # MindVault
 
-[English](README.en.md) · [日本語](README.ja.md)
-
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%2F%20iPadOS%2017.0%2B-blue)
 ![Swift](https://img.shields.io/badge/Swift-SwiftUI%20%7C%20SwiftData-orange)
 ![License](https://img.shields.io/badge/License-Apache%202.0-lightgrey)
