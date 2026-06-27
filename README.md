@@ -10,7 +10,7 @@ A local-first Markdown notebook that stores notes primarily on device and builds
 
 ---
 
-## About
+## Overview
 
 **MindVault** is a local-first Markdown notebook for people who want their ideas to grow. Write in plain Markdown, link any two notes together, and your knowledge turns into an explainable graph you can explore — with on-device AI that suggests what to read next.
 
@@ -26,7 +26,7 @@ A local-first Markdown notebook that stores notes primarily on device and builds
 - Markdown / JSON / CSV import and export
 - No ads
 
-## Architecture
+## Development
 
 ### Frameworks
 
@@ -72,7 +72,7 @@ Subscriptions are Free / Pro / Team.
 
 Future extensions may include AI credits and extra storage tiers.
 
-## Getting Started
+## Quickstart
 
 ### Requirements
 
@@ -116,7 +116,7 @@ xcodebuild test \
 
 ## Status
 
-Preparing for App Store Connect submission (`PREPARE_FOR_SUBMISSION`). The initial submission is planned to attach `mindvault.pro.monthly` and `mindvault.team.monthly` to the app version. See `Docs/` for submission details and review notes. GitHub Pages is intentionally disabled for this source repository.
+Preparing for App Store Connect submission (`PREPARE_FOR_SUBMISSION`). The initial submission is planned to attach `mindvault.pro.monthly` and `mindvault.team.monthly` to the app version. See `docs/` for submission details and review notes. GitHub Pages is intentionally disabled for this source repository.
 
 ## Support
 

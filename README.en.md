@@ -72,7 +72,7 @@ Subscriptions are Free / Pro / Team.
 
 Future extensions may include AI credits and extra storage tiers.
 
-## Getting Started
+## Quickstart
 
 ### Requirements
 
@@ -116,7 +116,7 @@ xcodebuild test \
 
 ## Status
 
-Preparing for App Store Connect submission (`PREPARE_FOR_SUBMISSION`). The initial submission is planned to attach `mindvault.pro.monthly` and `mindvault.team.monthly` to the app version. See `Docs/` for submission details and review notes. GitHub Pages is intentionally disabled for this source repository.
+Preparing for App Store Connect submission (`PREPARE_FOR_SUBMISSION`). The initial submission is planned to attach `mindvault.pro.monthly` and `mindvault.team.monthly` to the app version. See `docs/` for submission details and review notes. GitHub Pages is intentionally disabled for this source repository.
 
 ## Support
 

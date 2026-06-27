@@ -21,6 +21,12 @@ jobs:
           test -f CONTRIBUTING.md
           test -f SECURITY.md
           test -f .github/pull_request_template.md
+      - name: README structure
+        run: |
+          set -eu
+          for heading in '## Overview' '## Status' '## Quickstart' '## Development' '## Support' '## License'; do
+            grep -Fq "$heading" README.md
+          done
       - name: Banned artifacts
         run: |
           set -eu

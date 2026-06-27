@@ -116,7 +116,7 @@ xcodebuild test \
 
 ## 現在の状態
 
-App Store Connect への提出準備中（`PREPARE_FOR_SUBMISSION`）です。初回提出では、サブスクリプション（`mindvault.pro.monthly`, `mindvault.team.monthly`）をアプリバージョンに添付する予定です。提出詳細は `Docs/` を参照してください。本ソースリポジトリでは GitHub Pages を意図的に無効化しています。
+App Store Connect への提出準備中（`PREPARE_FOR_SUBMISSION`）です。初回提出では、サブスクリプション（`mindvault.pro.monthly`, `mindvault.team.monthly`）をアプリバージョンに添付する予定です。提出詳細は `docs/` を参照してください。本ソースリポジトリでは GitHub Pages を意図的に無効化しています。
 
 ## サポート
 

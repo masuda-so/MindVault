@@ -6,7 +6,7 @@ This is a local candidate only. It has not been saved to App Store Connect.
 
 ## Evidence Used
 
-- Existing MindVault Japanese metadata draft: `Docs/APP_STORE_CONNECT_MINDVAULT_METADATA.md`
+- Existing MindVault Japanese metadata draft: `docs/APP_STORE_CONNECT_MINDVAULT_METADATA.md`
 - Current app copy and product scope: `README.en.md`, `README.ja.md`
 - Existing translated reference app structure and tone:
   - `/Users/masudaso/Documents/GitHub/GratefulMoments/AppStoreConnectAssets/ja-JP/metadata.md`
