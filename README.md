@@ -123,11 +123,17 @@ Preparing for App Store Connect submission (`PREPARE_FOR_SUBMISSION`). The initi
 - Questions or bug reports: open a [GitHub Issue](https://github.com/masuda-so/MindVault/issues)
 - Email: so.masuda.2003@pm.me
 
+## Where to get help
+
+- Open a GitHub issue for bugs, feedback, or feature requests.
+- Reach out by email for product or privacy questions.
+- See [CONTRIBUTING](./CONTRIBUTING.md) for the contribution workflow.
+
 ## License
 
 Licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) file for details.
 
-## Maintainer
+## Maintainers and contributing
 
 - **Soh Masuda** (増田創) — original developer
 
